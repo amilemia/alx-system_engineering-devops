@@ -6,4 +6,4 @@ key_name="school"
 passphrase="betty"
 
 # Generate the RSA key pair with the specified key size and passphrase
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/"$key_name" -N "$passphrase"
+ssh-keygen -t rsa -b 4096 -f $key_name -N $passphrase
