@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script that configures Nginx for URL redirection
+
+sudo apt update
+sudo apt install nginx -y
+echo '301 Moved Permanently' | sudo tee /var/www/html/index.nginx-debian.html
+sudo service nginx restart
