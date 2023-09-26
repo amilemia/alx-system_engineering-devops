@@ -7,7 +7,6 @@ if ! [ -x "$(command -v nginx)" ]; then
   sudo apt install nginx -y
 fi
 
-# Create a Nginx configuration file for the redirection
 echo 'server {
     listen 80;
     server_name _;
@@ -22,11 +21,8 @@ echo 'server {
     }
 }' | sudo tee /etc/nginx/sites-available/redirect_me
 
-# Create a symbolic link to enable the site
 sudo ln -s /etc/nginx/sites-available/redirect_me /etc/nginx/sites-enabled/
 
-# Test Nginx configuration for syntax errors
 sudo nginx -t
 
-# Reload Nginx to apply the changes
-sudo systemctl reload nginx
+sudo service nginx restart
