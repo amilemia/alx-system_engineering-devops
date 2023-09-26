@@ -7,18 +7,6 @@ if ! [ -x "$(command -v nginx)" ]; then
   sudo apt install nginx -y
 fi
 
-# Create a custom HTML file for redirection
-echo '<!DOCTYPE html>
-<html>
-  <head>
-    <title>301 Moved Permanently</title>
-  </head>
-  <body>
-    <h1>301 Moved Permanently</h1>
-    <p>The document has moved <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4">here</a>.</p>
-  </body>
-</html>' | sudo tee /var/www/html/redirect_me.html
-
 # Create a Nginx configuration file for the redirection
 echo 'server {
     listen 80;
