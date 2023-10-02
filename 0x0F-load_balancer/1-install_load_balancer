@@ -35,8 +35,8 @@ frontend amilemia.tech
 
 backend webservers
     balance roundrobin
-    server web-01 386741-web-01 52.3.244.240:80 check
-    server web-02 386741-web-02 52.91.146.187:80 check
+    server 386741-web-01 52.3.244.240:80 check
+    server 386741-web-02 52.91.146.187:80 check
 EOF
 
 haproxy -c -f /etc/haproxy/haproxy.cfg
