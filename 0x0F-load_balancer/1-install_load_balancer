@@ -38,6 +38,4 @@ EOF
 
 haproxy -c -f /etc/haproxy/haproxy.cfg
 
-sudo systemctl restart haproxy
-
-sudo systemctl enable haproxy
+sudo service haproxy start
