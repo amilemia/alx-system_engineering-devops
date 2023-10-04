@@ -28,9 +28,9 @@ defaults
 
 frontend amilemia.tech
     bind *:80
-    default_backend webservers
+    default_backend web_servers
 
-backend webservers
+backend web_servers
     balance roundrobin
     server 386741-web-01 52.3.244.240:80 check
     server 386741-web-02 52.91.146.187:80 check
@@ -38,4 +38,4 @@ EOF
 
 haproxy -c -f /etc/haproxy/haproxy.cfg
 
-sudo service haproxy start
+sudo service haproxy restart
