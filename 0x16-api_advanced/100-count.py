@@ -6,14 +6,10 @@ import requests
 
 headers = {"User-Agent": "MyCustomUserAgent/1.0"}
 
+
 def count_words(subreddit, word_list, after=None, counts=None):
     """
-    Recursively query the Reddit API, parse article titles, and print sorted keyword counts.
-
-    :param subreddit: The name of the subreddit to search.
-    :param word_list: A list of keywords to count.
-    :param after: The 'after' parameter for pagination (default is None).
-    :param counts: A dictionary to store keyword counts (default is None).
+    doc module
     """
     if counts is None:
         counts = {}

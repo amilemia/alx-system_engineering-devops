@@ -6,14 +6,10 @@ import requests
 
 headers = {"User-Agent": "MyCustomUserAgent/1.0"}
 
+
 def recurse(subreddit, hot_list=[], after=None):
     """
-    Recursively query the Reddit API to retrieve hot article titles from a subreddit.
-
-    :param subreddit: The name of the subreddit to query.
-    :param hot_list: A list to store the hot article titles (default is an empty list).
-    :param after: The 'after' parameter for pagination (default is None).
-    :return: A list of hot article titles, or None if the subreddit is invalid.
+    doc module
     """
     if not subreddit:
         return None
