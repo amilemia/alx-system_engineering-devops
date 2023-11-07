@@ -29,7 +29,6 @@ def recurse(subreddit, hot_list=[], after=None):
         for post in data["data"]["children"]:
             hot_list.append(post["data"]["title"])
 
-        # Check if there are more pages
         after = data["data"]["after"]
         if after:
             return recurse(subreddit, hot_list, after)
